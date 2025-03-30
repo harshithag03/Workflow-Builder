@@ -1,0 +1,349 @@
+/* Reset some base styles */
+body {
+    background-color: #f0f4f8 !important; 
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Block any purple elements */
+  [style*="purple"], 
+  [style*="#800080"],
+  [style*="#4B0082"] {
+    display: none !important;
+    background: none !important;
+  }
+  
+  /* Clear page structure */
+  .page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+  }
+  
+  /* Workflow header */
+  .workflow-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .workflow-description {
+    color: #666;
+    margin-bottom: 24px;
+  }
+  
+  /* Section headers */
+  .section-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #eee;
+    color: #333;
+  }
+  
+  /* Step cards */
+  .step-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  
+  .step-card:hover {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .step-title {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .step-description {
+    color: #666;
+    margin-bottom: 12px;
+  }
+  
+  .step-info {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Buttons and controls */
+  .button {
+    background-color: #4a8eff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .button:hover {
+    background-color: #3a7fed;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th {
+    text-align: left;
+    padding: 12px 8px;
+    font-weight: 600;
+    border-bottom: 2px solid #eee;
+    color: #555;
+  }
+  
+  td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Fix for the workflow builder specific elements */
+  #workflow-steps,
+  #workflow-connections {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    background: white;
+  }
+  
+  /* Badges and status indicators */
+  .badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .badge-approval {
+    background-color: #e6f4ea;
+    color: #137333;
+  }
+  
+  .badge-notification {
+    background-color: #e8f0fe;
+    color: #1967d2;
+  }
+  
+  .badge-task {
+    background-color: #fff8e1;
+    color: #f9a825;
+  }
+
+
+  /* Add this to your fix.css file */
+
+/* Role badges */
+.role-badge {
+    display: inline-block;
+    background-color: #e9f3ff;
+    color: #0066cc;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+  
+  /* Roles section */
+  .roles-section {
+    margin-top: 8px;
+    border-top: 1px solid #eee;
+    padding-top: 8px;
+  }
+  
+  .roles-title {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+  }
+  
+  .roles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  /* Workflow steps styling */
+#Workflow_Steps, 
+#workflow-steps, 
+div:has(> div:contains("Workflow Steps")),
+div:has(> h2:contains("Workflow Steps")) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Step headers styling */
+div[id^="Initial"], 
+div[id^="Final"], 
+div[id^="Quality"],
+h3:contains("Initial"),
+h3:contains("Final"),
+h3:contains("Quality"),
+div:has(+ div:contains("Step")) {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  padding: 8px;
+  background-color: #f5f8ff;
+  border-left: 4px solid #4a8eff;
+  border-radius: 4px;
+}
+
+/* Step styling */
+div:contains("Step"),
+span:contains("Step") {
+  font-weight: 500;
+  color: #666;
+}
+
+/* Step type indicators */
+div:contains("Notification"),
+div:contains("Approval"),
+span:contains("Notification"),
+span:contains("Approval") {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+div:contains("Notification"),
+span:contains("Notification") {
+  background-color: #e8f0fe;
+  color: #1967d2;
+}
+
+div:contains("Approval"),
+span:contains("Approval") {
+  background-color: #e6f4ea;
+  color: #137333;
+}
+
+/* Step description */
+div:has(+ div:contains("Step")):not(:contains("Step")) {
+  margin-bottom: 8px;
+}
+
+/* Connection styling */
+div:contains("Connects to:") {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #666;
+}
+
+div:contains("If Approved") {
+  display: inline-block;
+  margin: 2px 0;
+  padding: 2px 8px;
+  background-color: #e6f4ea;
+  color: #137333;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+div:contains("If Rejected") {
+  display: inline-block;
+  margin: 2px 0;
+  padding: 2px 8px;
+  background-color: #fce8e6;
+  color: #c5221f;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+/* Workflow connections section */
+div:contains("Workflow Connections") {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #eee;
+}
+
+/* Action buttons */
+button, 
+.button,
+[type="button"] {
+  background-color: #4a8eff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+button:hover,
+.button:hover,
+[type="button"]:hover {
+  background-color: #3a7fed;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+th {
+  text-align: left;
+  padding: 10px 8px;
+  background-color: #f5f7fa;
+  font-weight: 600;
+  border-bottom: 2px solid #eaecef;
+}
+
+td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #eaecef;
+}
+
+/* Card-like styling for step sections */
+div:has(> div:contains("Step")):not(:contains("Workflow")) {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Container styling */
+body {
+  background-color: #f5f8ff !important;
+}
+
+#__next, main, .container {
+  background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
