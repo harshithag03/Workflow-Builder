@@ -42,12 +42,12 @@ const ConnectionDetails = ({ connection }) => {
 
       <div>
         <h3 className="text-sm font-medium text-gray-500">From Step</h3>
-        <p className="mt-1 text-sm text-gray-900">{connection.from_step_name || 'Unknown'}</p>
+        <p className="mt-1 text-sm text-gray-900">{connection.from_step_id || 'Unknown'}</p>
       </div>
 
       <div>
         <h3 className="text-sm font-medium text-gray-500">To Step</h3>
-        <p className="mt-1 text-sm text-gray-900">{connection.to_step_name || 'Unknown'}</p>
+        <p className="mt-1 text-sm text-gray-900">{connection.to_step_id || 'Unknown'}</p>
       </div>
     </div>
   );
